@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId 'ir.mahmoodvand.file101'
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 2
+        versionName "2.0"
+        multiDexEnabled true
+        resConfig "en"
+        manifestPlaceholders = [onesignal_app_id               : "e5b62593-1c81-469e-8af9-d33c5dcad730",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "309484782856"]
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'mdpi', 'hdpi', 'xhdpi', 'xxhdpi', 'xxxhdpi'
+        }
+    }
+    buildTypes { 
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.onesignal:OneSignal:3.5.7'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'org.jetbrains:annotations-java5:15.0'
+}
