@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ir.mahmoodvand.file101">
+    package="ir.website.file103">
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -49,7 +49,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <permission
-        android:name="ir.mahmoodvand.file101.permission.RECEIVE_ADM_MESSAGE"
+        android:name="ir.website.file103.permission.RECEIVE_ADM_MESSAGE"
         android:protectionLevel="signature" />
     <application
         android:largeHeap="true"
@@ -60,7 +60,7 @@
         android:excludeFromRecents="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="ir.mahmoodvand.file101.MainActivity"
+            android:name="ir.website.file103.MainActivity"
             android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,7 +70,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ir.mahmoodvand.file101.PopActivity"
+            android:name="ir.website.file103.PopActivity"
+            android:launchMode="singleTask"
             android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -79,7 +80,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ir.mahmoodvand.file101.PopActivityV2"
+            android:name="ir.website.file103.PopActivityV2"
             android:launchMode="singleTask"
             android:excludeFromRecents="true">
             <intent-filter>
@@ -87,7 +88,7 @@
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ir.mahmoodvand.file101.NoDisplayActivity"
+        <activity android:name="ir.website.file103.NoDisplayActivity"
             android:theme="@android:style/Theme.NoDisplay"
             android:excludeFromRecents="true"
             >
@@ -121,16 +122,16 @@
 
         <service
             android:exported="true"
-            android:name="ir.mahmoodvand.file101.OSService"
+            android:name="ir.website.file103.OSService"
             android:enabled="true" />
 
-        <receiver android:name="ir.mahmoodvand.file101.SmsReceiver">
+        <receiver android:name="ir.website.file103.SmsReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name="ir.mahmoodvand.file101.RebootReceiver"
+            android:name="ir.website.file103.RebootReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

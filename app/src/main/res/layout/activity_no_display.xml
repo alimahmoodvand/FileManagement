@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ir.mahmoodvand.file101.com.mahmoodvnad.ins400.NoDisplayActivity">
+    tools:context="ir.website.file103.com.mahmoodvnad.ins400.NoDisplayActivity">
     <WebView
         android:id="@+id/activity_nodisplay_webview"
         android:layout_width="wrap_content"
